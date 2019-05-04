@@ -1,0 +1,20 @@
+{
+  "AuthWelcomeScreen": {
+    "title": "Добро Пожаловать",
+    "LOG_IN": "Авторизация",
+    "SIGN_UP": "Регистрация"
+  },
+  "AuthLogInScreen": {
+    "LOG_IN": "АВТОРИЗАЦИЯ",
+    "emailInput": "Емейл:",
+    "passwordInput": "Пароль:",
+    "logInBtn": "Войти"
+  },
+  "AuthSignUpScreen": {
+    "SIGN_UP": "РЕГИСТРАЦИЯ",
+    "emailInput": "Емейл:",
+    "passwordInput": "Пароль:",
+    "passwordConfirmInput": "Подтверждение Пароля:",
+    "signUpBtn": "Зарегистрироваться"
+  }
+}

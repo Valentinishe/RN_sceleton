@@ -1,0 +1,74 @@
+{
+  "name": "rn",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "lint": "tslint -c tslint.json './src/**/*.{ts,tsx}'",
+    "test-ui": "detox test",
+    "clean": "watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && npm cache clean --force && npm install && npm start -- --reset-cache",
+    "clear-cache": "npm start -- --reset-cache"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/rn.app",
+        "build": "xcodebuild -project ios/rn.xcodeproj -scheme rn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    },
+    "test-runner": "mocha"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.16",
+    "@types/react-navigation": "^3.0.6",
+    "axios": "^0.18.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "detox": "^12.6.1",
+    "husky": "^2.2.0",
+    "lodash": "^4.17.11",
+    "mocha": "^6.1.4",
+    "react": "16.8.3",
+    "react-native": "0.59.5",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-i18n": "^2.0.15",
+    "react-native-size-matters": "^0.2.1",
+    "react-native-svg": "^9.4.0",
+    "react-navigation": "^3.9.1",
+    "react-navigation-redux-helpers": "^3.0.2",
+    "react-redux": "^7.0.3",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
+    "redux-axios-middleware": "^4.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "metro-react-native-babel-preset": "^0.54.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "AuthWelcomeScreen": {
+    "title": "Welcome",
+    "LOG_IN": "LOG IN",
+    "SIGN_UP": "SIGN UP"
+
+  },
+  "AuthLogInScreen": {
+    "LOG_IN": "LOG IN",
+    "emailInput": "Email:",
+    "passwordInput": "Password:",
+    "logInBtn": "Log In"
+  },
+  "AuthSignUpScreen": {
+    "SIGN_UP": "SIGN UP",
+    "emailInput": "Email:",
+    "passwordInput": "Password:",
+    "passwordConfirmInput": "Confirm password:",
+    "signUpBtn": "Sign Up"
+  }
+}
